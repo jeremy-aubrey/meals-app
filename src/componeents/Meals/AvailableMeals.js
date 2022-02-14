@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
 import styles from "./AvailableMeals.module.css";
 
@@ -34,9 +35,11 @@ const AvailableMeals = () => {
 
     const mealsList = DUMMY_MEALS.map(meal => {
         return (
-            <li>
-                {meal.name}
-            </li>
+            <MealItem
+                key={meal.id}
+                name={meal.name}
+                description={meal.description}
+                price={meal.price} />
         );
     });
 
