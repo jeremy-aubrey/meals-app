@@ -11,7 +11,7 @@ const Cart = props => {
         })
 
     return (
-        <Modal>
+        <Modal onCloseCart={props.onCloseCart}>
             <ul className={styles['cart-items']}>
                 {cartItems}
             </ul>
